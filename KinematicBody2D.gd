@@ -8,17 +8,24 @@ export var jumpVelocity = 400 #Jump height
 var dashCount = 1
 var dashFramesMax = 6
 var velocity = Vector2()
-export var gravity = 8
+export var gravity = 700
 
 var didDashAdd = false
 
 var dashFrames = 0
 
-var dashAcceleration = 800
+var dashAcceleration = 800 * 60
 
+const rotationDegrees = 90
+
+func animate_rotation(frame):
+	var frameRot = (rotationDegrees / dashFramesMax)
+	
+	return frameRot * (dashFramesMax - frame)
+	
 func _physics_process(delta):
 	didDashAdd = false
-	velocity.y += gravity
+	velocity.y += gravity * delta
 	# Gravity stuff
 	if velocity.y > 0: #Player is falling
 		velocity += Vector2.UP * (-9.81) * (fallMultiplier) #Falling action is faster than jumping action | Like in mario
@@ -30,28 +37,35 @@ func _physics_process(delta):
 	if is_on_floor():
 		if Input.is_action_pressed("ui_left"):
 			velocity.x = -300
+			$Sprite.flip_h = true
+			$Sprite.play("Run", false)
 		elif Input.is_action_pressed("ui_right"):
+			$Sprite.flip_h = false
+			$Sprite.play("Run", false)
 			velocity.x = 300
 		else:
 			velocity.x = 0
+			$Sprite.play("Idle");
 	
 	
 	
-	if dashFrames != 0:
-		dashFrames -= 1
+	
 	# In the air
 	if !is_on_floor():
+		$Sprite.play("Jump")
 		if dashFrames == 0:
 			if Input.is_action_pressed("ui_left"):
+				$Sprite.flip_h = true
 				velocity.x = -300
 			elif Input.is_action_pressed("ui_right"):
+				$Sprite.flip_h = false
 				velocity.x = 300
 		else:
 			if Input.is_action_pressed("ui_left"):
-				velocity.x -= dashAcceleration
+				velocity.x -= dashAcceleration * delta
 				didDashAdd = true
 			elif Input.is_action_pressed("ui_right"):
-				velocity.x += dashAcceleration
+				velocity.x += dashAcceleration * delta
 				didDashAdd = true
 		if !Input.is_action_pressed("ui_left") and !Input.is_action_pressed("ui_right"):
 			velocity.x = 0
@@ -65,14 +79,34 @@ func _physics_process(delta):
 			velocity = Vector2.UP * jumpVelocity
 	else:
 		if Input.is_action_just_pressed("ui_accept") and dashCount > 0:
-			if Input.is_action_pressed("ui_left") or Input.is_action_pressed("ui_right"):
+			if Input.is_action_pressed("ui_left"):
+				$Sprite.rotation_degrees = -90
+				dashFrames = dashFramesMax
+			if Input.is_action_pressed("ui_right"):
+				$Sprite.rotation_degrees = 90
 				dashFrames = dashFramesMax
 			dashCount -= 1
 	
+	if dashFrames > 0:
+		if Input.is_action_pressed("ui_left"):
+			$Sprite.rotation_degrees = -animate_rotation(dashFrames)
+		if Input.is_action_pressed("ui_right"):
+			$Sprite.rotation_degrees = animate_rotation(dashFrames)
+#	elif dashFrames > 0:
+#		if Input.is_action_pressed("ui_left"):
+#			$Sprite.rotation_degrees = -90
+#		if Input.is_action_pressed("ui_right"):
+#			$Sprite.rotation_degrees = 90
+		
+	
+	if dashFrames == 0:
+		$Sprite.rotation_degrees = 0
+	if dashFrames != 0:
+		dashFrames -= 1
 	
 	velocity = move_and_slide(velocity, Vector2(0,-1), false, 25)
 	
-	print(delta, delta, delta, delta)
+	print(velocity.y)
 
 	#print('velocityX: ', velocity.x, ' ', velocity.y, ' ', didDashAdd, ' ', delta)
 	

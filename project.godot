@@ -19,6 +19,12 @@ config/name="practice"
 run/main_scene="res://world.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/vsync/use_vsync=false
+window/stretch/mode="2d"
+window/stretch/aspect="expand"
+
 [input]
 
 ui_accept={
