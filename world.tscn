@@ -1,84 +1,108 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=39 format=2]
 
-[ext_resource path="res://KinematicBody2D.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/Player/Jump1.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/Player/Jump3.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/Player/Jump4.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/Player/Veles/Veles_0.png" type="Texture" id=5]
-[ext_resource path="res://Sprites/Player/Veles/Veles_1.png" type="Texture" id=6]
-[ext_resource path="res://Sprites/Player/Veles/Veles_2.png" type="Texture" id=7]
-[ext_resource path="res://Sprites/Player/Veles/Veles_3.png" type="Texture" id=8]
-[ext_resource path="res://Sprites/Player/Veles/Veles_4.png" type="Texture" id=9]
-[ext_resource path="res://Sprites/Player/Veles/Veles_5.png" type="Texture" id=10]
-[ext_resource path="res://Sprites/Player/Veles/Veles_6.png" type="Texture" id=11]
-[ext_resource path="res://Sprites/Player/Veles/Veles_7.png" type="Texture" id=12]
-[ext_resource path="res://Sprites/Player/Veles/Veles_8.png" type="Texture" id=13]
-[ext_resource path="res://Sprites/Player/Veles/Veles_9.png" type="Texture" id=14]
-[ext_resource path="res://Sprites/Player/Veles/Veles_10.png" type="Texture" id=15]
-[ext_resource path="res://Sprites/Player/Veles/Veles_11.png" type="Texture" id=16]
-[ext_resource path="res://Sprites/Player/Veles/Veles_12.png" type="Texture" id=17]
-[ext_resource path="res://Sprites/Player/Veles/Veles_13.png" type="Texture" id=18]
-[ext_resource path="res://Sprites/Player/Veles/Veles_14.png" type="Texture" id=19]
-[ext_resource path="res://Sprites/Player/Veles/Veles_15.png" type="Texture" id=20]
-[ext_resource path="res://Sprites/Player/Veles/Veles_17.png" type="Texture" id=21]
-[ext_resource path="res://Sprites/Player/Run0.png" type="Texture" id=22]
-[ext_resource path="res://Sprites/Player/Run1.png" type="Texture" id=23]
-[ext_resource path="res://Sprites/Player/Run2.png" type="Texture" id=24]
-[ext_resource path="res://Sprites/Player/Run3.png" type="Texture" id=25]
-[ext_resource path="res://Sprites/Player/Run4.png" type="Texture" id=26]
-[ext_resource path="res://Sprites/Player/Run5.png" type="Texture" id=27]
-[ext_resource path="res://JungleDirtTileSet.tres" type="TileSet" id=28]
+[ext_resource path="res://Player.gd" type="Script" id=1]
+[ext_resource path="res://Position2D.gd" type="Script" id=2]
+[ext_resource path="res://Sprites/Player/Veles/Veles_0.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Player/Veles/Veles_1.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Player/Veles/Veles_2.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Player/Veles/Veles_3.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Player/Veles/Veles_4.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Player/Veles/Veles_5.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Player/Veles/Veles_6.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Player/Veles/Veles_7.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Player/Veles/Veles_8.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Player/Veles/Veles_9.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Player/Veles/Veles_10.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Player/Veles/Veles_11.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Player/Veles/Veles_12.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Player/Veles/Veles_13.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/Player/Veles/Veles_14.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/Player/Veles/Veles_15.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/Player/Veles/Veles_17.png" type="Texture" id=19]
+[ext_resource path="res://Sprites/Player/Jump1.png" type="Texture" id=20]
+[ext_resource path="res://Sprites/Player/Jump3.png" type="Texture" id=21]
+[ext_resource path="res://Sprites/Player/Jump4.png" type="Texture" id=22]
+[ext_resource path="res://JungleDirtTileSet.tres" type="TileSet" id=23]
+[ext_resource path="res://Enemy.gd" type="Script" id=24]
+[ext_resource path="res://Sprites/Player/Satlas/satlas_idle_0.png" type="Texture" id=25]
+[ext_resource path="res://Sprites/Player/Satlas/satlas_idle_1.png" type="Texture" id=26]
+[ext_resource path="res://Sprites/Player/Satlas/satlas_idle_2.png" type="Texture" id=27]
+[ext_resource path="res://Sprites/Player/Satlas/satlas_idle_3.png" type="Texture" id=28]
+[ext_resource path="res://Sprites/Player/Satlas/satlas_idle_4.png" type="Texture" id=29]
+[ext_resource path="res://Sprites/Player/Satlas/satlas_idle_5.png" type="Texture" id=30]
+[ext_resource path="res://Sprites/Player/Satlas/satlas_idle_6.png" type="Texture" id=31]
+[ext_resource path="res://Sprites/Player/Satlas/satlas_idle_7.png" type="Texture" id=32]
+[ext_resource path="res://Sprites/Player/Satlas/satlas_idle_8.png" type="Texture" id=33]
+[ext_resource path="res://Sprites/Player/Satlas/satlas_idle_9.png" type="Texture" id=34]
 
-[sub_resource type="CapsuleShape2D" id=1]
-radius = 18.2989
-height = 41.4341
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 8.423, 18.9879 )
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ],
-"loop": false,
-"name": "Jump",
-"speed": 10.0
+"frames": [  ],
+"loop": true,
+"name": "Run",
+"speed": 20.0
 }, {
-"frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ],
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ) ],
 "loop": true,
 "name": "Idle",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ) ],
+"frames": [ ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ) ],
+"loop": false,
+"name": "Jump",
+"speed": 10.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 10, 21.9208 )
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ) ],
 "loop": true,
-"name": "Run",
-"speed": 20.0
+"name": "Idle",
+"speed": 5.0
 } ]
 
 [node name="world" type="Node2D"]
 
 [node name="Player" type="KinematicBody2D" parent="."]
-position = Vector2( 361.873, 33.7584 )
+position = Vector2( 361.577, 37.9065 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2( 35, -33.66 )
+position = Vector2( -4, 2 )
 z_index = 1
 shape = SubResource( 1 )
 
+[node name="Position2D" type="Position2D" parent="Player/CollisionShape2D"]
+position = Vector2( 30, 0 )
+script = ExtResource( 2 )
+
 [node name="Sprite" type="AnimatedSprite" parent="Player"]
-position = Vector2( 47.0163, -47.0163 )
-scale = Vector2( 2.46926, 2.46926 )
 frames = SubResource( 2 )
 animation = "Idle"
-frame = 5
+frame = 15
 playing = true
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 current = true
+zoom = Vector2( 0.5, 0.5 )
 smoothing_enabled = true
+smoothing_speed = 10.0
+drag_margin_left = 0.11
+drag_margin_top = 0.11
+drag_margin_right = 0.11
+drag_margin_bottom = 0.11
 
 [node name="TileMap" type="TileMap" parent="."]
-tile_set = ExtResource( 28 )
+tile_set = ExtResource( 23 )
 cell_size = Vector2( 32, 32 )
 cell_clip_uv = true
 format = 1
@@ -86,3 +110,21 @@ tile_data = PoolIntArray( -1638423, 0, 0, -1638422, 1, 0, -1638421, 1, 0, -16384
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="Enemy" type="KinematicBody2D" parent="."]
+script = ExtResource( 24 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy"]
+position = Vector2( 4, 6 )
+shape = SubResource( 3 )
+
+[node name="Sprite" type="AnimatedSprite" parent="Enemy"]
+position = Vector2( 11.4568, -11.4568 )
+scale = Vector2( 1.35802, 1.35802 )
+frames = SubResource( 4 )
+animation = "Idle"
+frame = 8
+playing = true
