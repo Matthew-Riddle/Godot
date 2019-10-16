@@ -10,10 +10,12 @@ var pos = Vector2()
 export var gravity = 700
 var timer
 
-func init(vel, pos, spriteH):
+func init(vel, pos, spriteH, size):
 	velocity = vel
 	position = pos
 	timer = 100
+	scale.x = size
+	scale.y = size
 	if spriteH == -1:
 		$Sprite.flip_h = true
 	else:

@@ -39,7 +39,7 @@ func _physics_process(delta):
 				$CollisionShape2D/Position2D.position.x = -$CollisionShape2D/Position2D.position.x
 				
 			spriteH = -1
-			$Sprite.play("Idle", false) # Run anim
+			$Sprite.play("Run", false) # Run anim
 		elif Input.is_action_pressed("ui_right"):
 			$Sprite.flip_h = false
 			
@@ -48,7 +48,7 @@ func _physics_process(delta):
 				$CollisionShape2D/Position2D.position.x = -$CollisionShape2D/Position2D.position.x
 				
 			spriteH = 1
-			$Sprite.play("Idle", false) # Run anim
+			$Sprite.play("Run", false) # Run anim
 			velocity.x = 300
 		else:
 			velocity.x = 0
@@ -115,17 +115,17 @@ func _physics_process(delta):
 	if dashFrames != 0:
 		dashFrames -= 1
 	
-	if Input.is_action_just_pressed("ui_clone"):
-		print('Just pressed')
-		var number = randi()%100 + 1
-		clone(velocity, $CollisionShape2D/Position2D.global_position, spriteH)
+	if Input.is_action_pressed("ui_clone"):
+		var number = randf()*3
+		print(number)
+		clone(velocity, $CollisionShape2D/Position2D.global_position, spriteH, number)
 	velocity = move_and_slide(velocity, Vector2(0,-1), false, 25)
 	
 	update()
 
-func clone(vel, pos, horizontal):
+func clone(vel, pos, horizontal, size):
 	var boi = cloney.instance()
-	boi.init(vel, pos, spriteH)
+	boi.init(vel, pos, spriteH, size)
 	get_parent().add_child(boi)
 	
 func _draw():

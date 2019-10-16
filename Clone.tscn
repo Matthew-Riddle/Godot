@@ -1,31 +1,44 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://Clone.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/Player/Veles/Veles_0.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/Player/Veles/Veles_1.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/Player/Veles/Veles_2.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/Player/Veles/Veles_3.png" type="Texture" id=5]
-[ext_resource path="res://Sprites/Player/Veles/Veles_4.png" type="Texture" id=6]
-[ext_resource path="res://Sprites/Player/Veles/Veles_5.png" type="Texture" id=7]
-[ext_resource path="res://Sprites/Player/Veles/Veles_6.png" type="Texture" id=8]
-[ext_resource path="res://Sprites/Player/Veles/Veles_7.png" type="Texture" id=9]
-[ext_resource path="res://Sprites/Player/Veles/Veles_8.png" type="Texture" id=10]
-[ext_resource path="res://Sprites/Player/Veles/Veles_9.png" type="Texture" id=11]
-[ext_resource path="res://Sprites/Player/Veles/Veles_10.png" type="Texture" id=12]
-[ext_resource path="res://Sprites/Player/Veles/Veles_11.png" type="Texture" id=13]
-[ext_resource path="res://Sprites/Player/Veles/Veles_12.png" type="Texture" id=14]
-[ext_resource path="res://Sprites/Player/Veles/Veles_13.png" type="Texture" id=15]
-[ext_resource path="res://Sprites/Player/Veles/Veles_14.png" type="Texture" id=16]
-[ext_resource path="res://Sprites/Player/Veles/Veles_15.png" type="Texture" id=17]
-[ext_resource path="res://Sprites/Player/Veles/Veles_16.png" type="Texture" id=18]
-[ext_resource path="res://Sprites/Player/Veles/Veles_17.png" type="Texture" id=19]
+[ext_resource path="res://Sprites/Player/Veles/Run/Veles_Run_0.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Player/Veles/Run/Veles_Run_1.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Player/Veles/Run/Veles_Run_2.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Player/Veles/Run/Veles_Run_3.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Player/Veles/Run/Veles_Run_4.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Player/Veles/Run/Veles_Run_5.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Player/Veles/Run/Veles_Run_6.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Player/Veles/Run/Veles_Run_7.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Player/Veles/Idle/Veles_0.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Player/Veles/Idle/Veles_1.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Player/Veles/Idle/Veles_2.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Player/Veles/Idle/Veles_3.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Player/Veles/Idle/Veles_4.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Player/Veles/Idle/Veles_5.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Player/Veles/Idle/Veles_6.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/Player/Veles/Idle/Veles_7.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/Player/Veles/Idle/Veles_8.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/Player/Veles/Idle/Veles_9.png" type="Texture" id=19]
+[ext_resource path="res://Sprites/Player/Veles/Idle/Veles_10.png" type="Texture" id=20]
+[ext_resource path="res://Sprites/Player/Veles/Idle/Veles_11.png" type="Texture" id=21]
+[ext_resource path="res://Sprites/Player/Veles/Idle/Veles_12.png" type="Texture" id=22]
+[ext_resource path="res://Sprites/Player/Veles/Idle/Veles_13.png" type="Texture" id=23]
+[ext_resource path="res://Sprites/Player/Veles/Idle/Veles_14.png" type="Texture" id=24]
+[ext_resource path="res://Sprites/Player/Veles/Idle/Veles_15.png" type="Texture" id=25]
+[ext_resource path="res://Sprites/Player/Veles/Idle/Veles_16.png" type="Texture" id=26]
+[ext_resource path="res://Sprites/Player/Veles/Idle/Veles_17.png" type="Texture" id=27]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10, 18.4531 )
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "Run",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ) ],
 "loop": true,
 "name": "Idle",
 "speed": 10.0
@@ -43,8 +56,8 @@ z_index = 1
 shape = SubResource( 1 )
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
-modulate = Color( 0.929412, 0.027451, 0.027451, 1 )
+modulate = Color( 1, 0, 0, 1 )
 frames = SubResource( 2 )
 animation = "Idle"
-frame = 9
+frame = 2
 playing = true
